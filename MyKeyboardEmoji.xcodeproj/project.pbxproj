@@ -15,6 +15,7 @@
 		3ED898F51F9087FF001D2B18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED898F41F9087FF001D2B18 /* main.m */; };
 		3ED898FF1F908800001D2B18 /* MyKeyboardEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED898FE1F908800001D2B18 /* MyKeyboardEmojiTests.m */; };
 		3ED8990A1F908800001D2B18 /* MyKeyboardEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED899091F908800001D2B18 /* MyKeyboardEmojiUITests.m */; };
+		98652034314994443E27AABD /* libPods-MyKeyboardEmoji.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2058A3FEADAAB252FB83B428 /* libPods-MyKeyboardEmoji.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2058A3FEADAAB252FB83B428 /* libPods-MyKeyboardEmoji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyKeyboardEmoji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F7007A1E9227D640BB555F /* Pods-MyKeyboardEmoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKeyboardEmoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyKeyboardEmoji/Pods-MyKeyboardEmoji.release.xcconfig"; sourceTree = "<group>"; };
+		39606CE7C8C0CC5E3E13237D /* Pods-MyKeyboardEmoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKeyboardEmoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyKeyboardEmoji/Pods-MyKeyboardEmoji.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED898E21F9087FF001D2B18 /* MyKeyboardEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeyboardEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED898E51F9087FF001D2B18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3ED898E61F9087FF001D2B18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98652034314994443E27AABD /* libPods-MyKeyboardEmoji.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				3ED898FD1F908800001D2B18 /* MyKeyboardEmojiTests */,
 				3ED899081F908800001D2B18 /* MyKeyboardEmojiUITests */,
 				3ED898E31F9087FF001D2B18 /* Products */,
+				F9E2F03B863633550170924A /* Pods */,
+				CE299669DB899111EC8B631C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = MyKeyboardEmojiUITests;
 			sourceTree = "<group>";
 		};
+		CE299669DB899111EC8B631C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2058A3FEADAAB252FB83B428 /* libPods-MyKeyboardEmoji.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E2F03B863633550170924A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39606CE7C8C0CC5E3E13237D /* Pods-MyKeyboardEmoji.debug.xcconfig */,
+				38F7007A1E9227D640BB555F /* Pods-MyKeyboardEmoji.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ED8990E1F908800001D2B18 /* Build configuration list for PBXNativeTarget "MyKeyboardEmoji" */;
 			buildPhases = (
+				93D86421E508828965F41B7A /* [CP] Check Pods Manifest.lock */,
 				3ED898DE1F9087FF001D2B18 /* Sources */,
 				3ED898DF1F9087FF001D2B18 /* Frameworks */,
 				3ED898E01F9087FF001D2B18 /* Resources */,
+				5488DF99F453B67AACAEFD97 /* [CP] Embed Pods Frameworks */,
+				3036F0D5A267F3378C5AD2DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +286,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3036F0D5A267F3378C5AD2DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyKeyboardEmoji/Pods-MyKeyboardEmoji-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5488DF99F453B67AACAEFD97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyKeyboardEmoji/Pods-MyKeyboardEmoji-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D86421E508828965F41B7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ED898DE1F9087FF001D2B18 /* Sources */ = {
@@ -428,6 +503,7 @@
 		};
 		3ED8990F1F908800001D2B18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39606CE7C8C0CC5E3E13237D /* Pods-MyKeyboardEmoji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +517,7 @@
 		};
 		3ED899101F908800001D2B18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F7007A1E9227D640BB555F /* Pods-MyKeyboardEmoji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
