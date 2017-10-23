@@ -17,6 +17,8 @@
 /** Emoji表情对应的十六进制字符串  */
 @property (nonatomic, strong) NSString *code;
 
+/** id  */
+@property (nonatomic, strong) NSString *ID;
 /** 是否是删除按钮  */
 @property (nonatomic, assign, getter=isRemoveButtonFlag) BOOL removeButtonFlag;
 /** 图片全路径  */
@@ -24,5 +26,7 @@
 /** Emoji表情字符串  */
 @property (nonatomic, strong) NSString *codeStr;
 
+- (instancetype)initWithId:(NSString *)Id;
 
+- (instancetype)initWithId:(NSString *)Id removeBtnFlag:(BOOL)removeFlag;
 @end

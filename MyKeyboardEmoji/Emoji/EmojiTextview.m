@@ -44,11 +44,19 @@
     
 }
 
--(NSString *)getContentStr{
-    
-    
-    
-    return nil;
+- (NSString *)getContentStr{
+    NSMutableString * mString = [NSMutableString new];
+    [self.attributedText enumerateAttributesInRange:NSMakeRange(0, self.attributedText.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSAttributedStringKey,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+        NSString *string = nil;
+        KeyboardAttachment * ment =  attrs[@"NSAttachment"];//取出富文本中的附件
+        if (ment ==nil) {
+            string = [NSString stringWithFormat:@"%@",ment.imageTitle];
+        }else{
+            // 文本
+            string = [NSString stringWithFormat:@"%@",[self.attributedText.string substringWithRange:range]];
+        }
+    }];
+    return mString;
     
 }
 
